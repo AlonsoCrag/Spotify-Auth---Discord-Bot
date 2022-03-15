@@ -51,7 +51,7 @@ func ReqAuthCode(code string) []byte {
 
 func Auhtorize() {
 	params := url.Values{}
-	params.Add("client_id", "a3709f91c4804454bf4e4d6a965a7f23")
+	params.Add("client_id", "client_id")
 	params.Add("response_type", "code")
 	params.Add("redirect_uri", "http://localhost:3000/access/")
 
