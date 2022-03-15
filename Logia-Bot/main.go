@@ -20,7 +20,7 @@ var Resp Response
 func main() {
 
 	fmt.Println("Application to manage a Discord Bot")
-	bot, err := discordgo.New("Bot " + "OTUxMzY5NTY0ODk2MjQzNzMy.Yimd8w.0cd-yj_G-wNZmBfcuUJSEV6TjWI")
+	bot, err := discordgo.New("Bot " + "token_string")
 	if err != nil {
 		fmt.Println(err.Error())
 		return
