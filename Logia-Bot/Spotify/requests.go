@@ -26,7 +26,7 @@ func ReqAuthCode(code string) []byte {
 	var body = []byte("grant_type=authorization_code" + "&" + "code=" + code + "&" + "redirect_uri=" + "http://localhost:3000/access/")
 	fmt.Println("Final body of the requests",  bytes.NewBuffer(body))
 
-	encodedString := base64.StdEncoding.EncodeToString([]byte("a3709f91c4804454bf4e4d6a965a7f23" + ":" + "827ce2455ed1445fa390dffeccc34eb8"))
+	encodedString := base64.StdEncoding.EncodeToString([]byte("application_id_string" + ":" + "token_id_string"))
 	encoded := fmt.Sprintf("Basic %s", encodedString)
 
 	req, _ := http.NewRequest("POST", reqAuthUri, bytes.NewBuffer(body))
